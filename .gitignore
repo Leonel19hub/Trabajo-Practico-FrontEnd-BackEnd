@@ -12,3 +12,21 @@ build/
 
 # Otros archivos generados
 *.log
+
+# Archivos generados por Angular CLI
+/dist/
+/tmp/
+/*.ngstyle.css
+/*.ngstyle.js
+/*.ngsummary.json
+/*.ngfactory.ts
+
+# Archivos de configuración generados por Angular CLI
+.angular-cli.json
+.angular-cli.json.save
+.angular-cli.yaml
+.angular-cli.yml
+
+# Archivos generados por el servidor de desarrollo de Angular
+/.npm
+/*.log
