@@ -1,0 +1,14 @@
+# Dependencias de Node.js
+node_modules/
+
+# Archivos generados por IDEs y editores de texto
+.vscode/
+.idea/
+*.sublime-*
+
+# Archivos y carpetas generados por Express.js
+dist/
+build/
+
+# Otros archivos generados
+*.log
