@@ -1,0 +1,53 @@
+<div class="container my-4 col-8">
+  <form class="row g-3 needs-validation was-validated" novalidate>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="validationCustom01" required>
+      <div class="invalid-feedback">
+        Por favor ingrese el nombre del producto
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Descripcion</label>
+      <input type="text" class="form-control" id="validationCustom02" required>
+      <div class="invalid-feedback">
+        Por favor ingrese la descripcion del producto
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom06" class="form-label">Imagen</label>
+      <input type="text" class="form-control" id="validationCustom06" required>
+      <div class="invalid-feedback">
+        Por favor ingrese la url de la imagen
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom04" class="form-label">Producto Destacado</label>
+      <select class="form-select" id="validationCustom04" required>
+        <option selected disabled value="">Por favor elija una opcion...</option>
+        <option [value]="true">Si</option>
+        <option [value]="false">No</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom05" class="form-label">Precio</label>
+      <input type="text" class="form-control" id="validationCustom05" required>
+      <div class="invalid-feedback">
+        Por favor ingrese el precio del producto
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom07" class="form-label">Stock</label>
+      <input type="text" class="form-control" id="validationCustom07" required>
+      <div class="invalid-feedback">
+        Por favor ingrese el stock del producto
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="">Cargar Producto</button>
+    </div>
+  </form>
+</div>
