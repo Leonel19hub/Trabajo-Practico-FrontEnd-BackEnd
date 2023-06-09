@@ -6,7 +6,27 @@ productoCtrl.getProductos = async (req, res) => {
     res.json(productos);
 };
 
+productoCtrl.getProductoId = async (req, res) => {
+    try {
+        const producto = await Producto.findById(req.params.id);
+        if (!producto) {
+            return res.status(404).json({
+                status: '0',
+                msg: 'Producto no encontrado'
+            });
+        }
+        res.json(producto);
+    } catch (error) {
+        res.status(400).json({
+            status: '0',
+            msg: 'Error procesando la operación.'
+        });
+    }
+};
+
+
 productoCtrl.createProducto = async (req, res) => {
+    console.log(req.body);
     var producto = new Producto(req.body);
     try {
         await producto.save();

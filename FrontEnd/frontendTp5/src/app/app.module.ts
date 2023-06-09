@@ -8,7 +8,10 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { MostrarProductoComponent } from './components/mostrar-producto/mostrar-producto.component';
 import { FormProductoComponent } from './components/form-producto/form-producto.component';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { ListadoProductoComponent } from './components/listado-producto/listado-producto.component';
+import { CargarProductoComponent } from './components/cargar-producto/cargar-producto.component';
+import { TicketComponent } from './components/ticket/ticket.component'
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import {HttpClientModule} from '@angular/common/http'
     FooterComponent,
     MostrarProductoComponent,
     FormProductoComponent,
+    ListadoProductoComponent,
+    CargarProductoComponent,
+    TicketComponent,
 
   ],
   imports: [

@@ -1,11 +1,12 @@
 <div class="container bg-success mt-4">
-  <article class="d-flex flex-wrap" >
-    <div class="card mx-3 my-3" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
+  <article class="d-flex flex-wrap">
+    <div class="card mx-3 my-3" style="width: 18rem;" *ngFor="let p of productos">
+      <img src="{{p.imagen}}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">{{p.nombre}}</h5>
+        <p class="card-text">{{p.descripcion}}</p>
+        <p class="card-text">$ {{p.precio}}</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
       </div>
     </div>
   </article>

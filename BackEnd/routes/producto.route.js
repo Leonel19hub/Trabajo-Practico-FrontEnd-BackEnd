@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.get('/', productoCtrl.getProductos);
 router.post('/', productoCtrl.createProducto);
+router.get('/detalle/:id', productoCtrl.getProductoId)
 router.get('/destacados', productoCtrl.getProductsDestacados);
 router.get('/:id', productoCtrl.editProducto);
 router.delete('/:id', productoCtrl.deleteProducto);

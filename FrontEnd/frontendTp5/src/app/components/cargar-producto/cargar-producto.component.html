@@ -1,4 +1,4 @@
-<div class="container my-4 col-8">
+<!-- <div class="container my-4 col-8">
   <form class="row g-3 needs-validation was-validated" novalidate>
     <div class="col-md-4">
       <label for="validationCustom01" class="form-label">Nombre</label>
@@ -56,4 +56,38 @@
 </div>
 
 
+ -->
 
+
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre del Producto</label>
+      <input type="email" [(ngModel)]="producto.nombre" name="nombre" class="form-control" id="exampleInputEmail1">
+    </div>
+    <div class=" mb-3">
+      <label for="exampleInputPassword1" class="form-label">Descripcion</label>
+      <input type="text" [(ngModel)]="producto.descripcion" name="descripcion" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInput Password1" class="form-label"> Imagen (URL)</label>
+      <input type="text" [(ngModel)]="producto.imagen" name="imagen" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Precio:</label>
+      <input type="number"[(ngModel)]="producto.precio" name="precio" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Stock:</label>
+      <input type="number" [(ngModel)]="producto.stock" name="stock" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <label for="exampleInputPassword1" name="destacado" class="form-label">Destacado</label>
+      <select [(ngModel)]="producto.destacado" name="destacado">
+        <option  [ngValue]="true">Si</option>
+        <option  [ngValue]="false">No</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="guardarProducto()">Guardar</button>
+  </form>
+</div>
