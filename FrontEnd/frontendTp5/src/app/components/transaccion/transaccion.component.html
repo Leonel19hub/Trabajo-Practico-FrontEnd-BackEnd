@@ -1,0 +1,124 @@
+<div class="container my-4 d-flex justify-content-center">
+
+
+  <div class="col-lg-8 mx-3  col-md-8 col-sm-12">
+    <div class="table-responsive">
+      <table class="table table-hover col-12 table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Moneda Origen</th>
+            <th scope="col">Cantidad Origen</th>
+            <th>Moneda Destino</th>
+            <th>Email CLiente</th>
+            <th>Tasa de Conversion</th>
+            <th>Cantidad Destino</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr *ngFor="let t of transacciones">
+            <th scope="row">{{t.monedaOrigen}}</th>
+            <td>{{t.cantidadOrigen}}</td>
+            <td>{{t.monedaDestino}}</td>
+            <td>{{t.emailCliente}}</td>
+            <td>{{t.tasaConversion}}</td>
+            <td>{{t.cantidadDestino}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <form class="col-lg-4 bg-primary text-white p-3">
+    <div class="">
+      <h3 class="text-center">Conversor de Divisas</h3>
+    </div>
+    <div class="mb-3">
+      <label for="cantidad" class="form-label">Email Cliente</label>
+      <input type="text" name="emailCliente" [(ngModel)]="transaccion.emailCliente" class="form-control" id="cantidad"
+        placeholder="$">
+    </div>
+    <div class="mb-3">
+      <label for="cantidad" class="form-label">Cantidad</label>
+      <input type="text" name="cant" [(ngModel)]="cant" class="form-control" id="cantidad" placeholder="$">
+    </div>
+    <div class="mb-3">
+      <label for="de" class="form-label">De: </label>
+      <select [(ngModel)]="fromType" name="fromType" class="form-select" aria-label="Default select example">
+        <option selected>Eleigr Moneda</option>
+        <option disabled>--- Monedas ---</option>
+        <option value="ARS">(ARS) Peso Argentino</option>
+        <option value="AUD">(AUD) Dólar Australiano</option>
+        <option value="BRL">(BRL) Real Brasileño</option>
+        <option value="CAD">(CAD) Dólar Canadiense</option>
+        <option value="CHF">(CHF) Franco Suizo</option>
+        <option value="CLP">(CLP) Peso Chileno</option>
+        <option value="CNY">(CNY) Yuan Chino</option>
+        <option value="COP">(COP) Peso Colombiano</option>
+        <option value="EUR">(EUR) Euro</option>
+        <option value="GBP">(GBP) Libra Esterlina</option>
+        <option value="JPY">(JPY) Yen Japonés</option>
+        <option value="MXN">(MXN) Peso Mexicano</option>
+        <option value="PEN">(PEN) Sol Peruano</option>
+        <option value="RUB">(RUB) Rublo Ruso</option>
+        <option value="SEK">(SEK) Corona Sueca</option>
+        <option value="USD">(USD) Dólares EEUU</option>
+        <option value="UYU">(UYU) Peso Uruguayo</option>
+        <option value="VEF">(VEF) Bolívar Venezolano</option>
+        <option disabled>--- Criptomonedas ---</option>
+        <option value="ADA">(ADA) Cardano</option>
+        <option value="BTC">(BTC) Bitcoin</option>
+        <option value="BCH">(BCH) Bitcoin Cash</option>
+        <option value="ETH">(ETH) Ethereum</option>
+        <option value="LTC">(LTC) Litecoin</option>
+        <option value="XRP">(XRP) Ripple</option>
+        <option value="ATOM">(ATOM) Cosmos</option>
+        <option value="DOT">(DOT) Polkadot</option>
+        <option value="LINK">(LINK) Chainlink</option>
+        <option value="NEO">(NEO) Neo</option>
+        <option value="XLM">(XLM) Stellar Lumens</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="de" class="form-label">A: </label>
+      <select class="form-select" name="toType" [(ngModel)]="toType" aria-label="Default select example">
+        <option selected>Eleigr Moneda</option>
+        <option disabled>--- Monedas ---</option>
+        <option value="ARS">(ARS) Peso Argentino</option>
+        <option value="AUD">(AUD) Dólar Australiano</option>
+        <option value="BRL">(BRL) Real Brasileño</option>
+        <option value="CAD">(CAD) Dólar Canadiense</option>
+        <option value="CHF">(CHF) Franco Suizo</option>
+        <option value="CLP">(CLP) Peso Chileno</option>
+        <option value="CNY">(CNY) Yuan Chino</option>
+        <option value="COP">(COP) Peso Colombiano</option>
+        <option value="EUR">(EUR) Euro</option>
+        <option value="GBP">(GBP) Libra Esterlina</option>
+        <option value="JPY">(JPY) Yen Japonés</option>
+        <option value="MXN">(MXN) Peso Mexicano</option>
+        <option value="PEN">(PEN) Sol Peruano</option>
+        <option value="RUB">(RUB) Rublo Ruso</option>
+        <option value="SEK">(SEK) Corona Sueca</option>
+        <option value="USD">(USD) Dólares EEUU</option>
+        <option value="UYU">(UYU) Peso Uruguayo</option>
+        <option value="VEF">(VEF) Bolívar Venezolano</option>
+        <option disabled>--- Criptomonedas ---</option>
+        <option value="ADA">(ADA) Cardano</option>
+        <option value="BTC">(BTC) Bitcoin</option>
+        <option value="BCH">(BCH) Bitcoin Cash</option>
+        <option value="ETH">(ETH) Ethereum</option>
+        <option value="LTC">(LTC) Litecoin</option>
+        <option value="XRP">(XRP) Ripple</option>
+        <option value="ATOM">(ATOM) Cosmos</option>
+        <option value="DOT">(DOT) Polkadot</option>
+        <option value="LINK">(LINK) Chainlink</option>
+        <option value="NEO">(NEO) Neo</option>
+        <option value="XLM">(XLM) Stellar Lumens</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <input type="number" class="form-control" id="cantidad" placeholder="$ {{finalResult}}">
+    </div>
+    <button type="button" (click)="convertirMoneda()" class="btn btn-success">Convertir <i
+        class="bi bi-arrow-right"></i></button>
+  </form>
+</div>

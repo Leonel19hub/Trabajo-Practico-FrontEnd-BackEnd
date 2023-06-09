@@ -11,7 +11,9 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { ListadoProductoComponent } from './components/listado-producto/listado-producto.component';
 import { CargarProductoComponent } from './components/cargar-producto/cargar-producto.component';
-import { TicketComponent } from './components/ticket/ticket.component'
+import { TicketComponent } from './components/ticket/ticket.component';
+import { TransaccionComponent } from './components/transaccion/transaccion.component';
+import { MostrarTransaccionesComponent } from './components/mostrar-transacciones/mostrar-transacciones.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { TicketComponent } from './components/ticket/ticket.component'
     ListadoProductoComponent,
     CargarProductoComponent,
     TicketComponent,
+    TransaccionComponent,
+    MostrarTransaccionesComponent,
 
   ],
   imports: [

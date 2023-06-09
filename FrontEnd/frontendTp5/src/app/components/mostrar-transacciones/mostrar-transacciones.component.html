@@ -1,0 +1,106 @@
+<div class="container">
+  <div class="d-flex col-10 justify-content-around my-4">
+    <div class="col-4 d-flex">
+      <label for="" class="form-label">Moneda Origen</label>
+        <select [(ngModel)]="monedaOrigen" name="monedaOrigen" class="form-select" aria-label="Default select example">
+          <option value="0" selected>Eleigr Moneda</option>
+          <option disabled>--- Monedas ---</option>
+          <option ngValue="ARS">(ARS) Peso Argentino</option>
+          <option value="AUD">(AUD) Dólar Australiano</option>
+          <option value="BRL">(BRL) Real Brasileño</option>
+          <option value="CAD">(CAD) Dólar Canadiense</option>
+          <option value="CHF">(CHF) Franco Suizo</option>
+          <option value="CLP">(CLP) Peso Chileno</option>
+          <option value="CNY">(CNY) Yuan Chino</option>
+          <option value="COP">(COP) Peso Colombiano</option>
+          <option value="EUR">(EUR) Euro</option>
+          <option value="GBP">(GBP) Libra Esterlina</option>
+          <option value="JPY">(JPY) Yen Japonés</option>
+          <option value="MXN">(MXN) Peso Mexicano</option>
+          <option value="PEN">(PEN) Sol Peruano</option>
+          <option value="RUB">(RUB) Rublo Ruso</option>
+          <option value="SEK">(SEK) Corona Sueca</option>
+          <option value="USD">(USD) Dólares EEUU</option>
+          <option value="UYU">(UYU) Peso Uruguayo</option>
+          <option value="VEF">(VEF) Bolívar Venezolano</option>
+          <option disabled>--- Criptomonedas ---</option>
+          <option value="ADA">(ADA) Cardano</option>
+          <option value="BTC">(BTC) Bitcoin</option>
+          <option value="BCH">(BCH) Bitcoin Cash</option>
+          <option value="ETH">(ETH) Ethereum</option>
+          <option value="LTC">(LTC) Litecoin</option>
+          <option value="XRP">(XRP) Ripple</option>
+          <option value="ATOM">(ATOM) Cosmos</option>
+          <option value="DOT">(DOT) Polkadot</option>
+          <option value="LINK">(LINK) Chainlink</option>
+          <option value="NEO">(NEO) Neo</option>
+          <option value="XLM">(XLM) Stellar Lumens</option>
+        </select>
+    </div>
+    <div class="col-4 d-flex">
+      <label for="" class="form-label">Moneda Destino</label>
+        <select [(ngModel)]="monedaDestino" name="monedaDestino" class="form-select" aria-label="Default select example">
+          <option value="0" selected>Eleigr Moneda</option>
+          <option disabled>--- Monedas ---</option>
+          <option value="ARS">(ARS) Peso Argentino</option>
+          <option value="AUD">(AUD) Dólar Australiano</option>
+          <option value="BRL">(BRL) Real Brasileño</option>
+          <option value="CAD">(CAD) Dólar Canadiense</option>
+          <option value="CHF">(CHF) Franco Suizo</option>
+          <option value="CLP">(CLP) Peso Chileno</option>
+          <option value="CNY">(CNY) Yuan Chino</option>
+          <option value="COP">(COP) Peso Colombiano</option>
+          <option value="EUR">(EUR) Euro</option>
+          <option value="GBP">(GBP) Libra Esterlina</option>
+          <option value="JPY">(JPY) Yen Japonés</option>
+          <option value="MXN">(MXN) Peso Mexicano</option>
+          <option value="PEN">(PEN) Sol Peruano</option>
+          <option value="RUB">(RUB) Rublo Ruso</option>
+          <option value="SEK">(SEK) Corona Sueca</option>
+          <option value="USD">(USD) Dólares EEUU</option>
+          <option value="UYU">(UYU) Peso Uruguayo</option>
+          <option value="VEF">(VEF) Bolívar Venezolano</option>
+          <option disabled>--- Criptomonedas ---</option>
+          <option value="ADA">(ADA) Cardano</option>
+          <option value="BTC">(BTC) Bitcoin</option>
+          <option value="BCH">(BCH) Bitcoin Cash</option>
+          <option value="ETH">(ETH) Ethereum</option>
+          <option value="LTC">(LTC) Litecoin</option>
+          <option value="XRP">(XRP) Ripple</option>
+          <option value="ATOM">(ATOM) Cosmos</option>
+          <option value="DOT">(DOT) Polkadot</option>
+          <option value="LINK">(LINK) Chainlink</option>
+          <option value="NEO">(NEO) Neo</option>
+          <option value="XLM">(XLM) Stellar Lumens</option>
+        </select>
+    </div>
+    <div class="md-4 d-flex">
+      <button (click)="buscar()" class="btn btn-success btn-lg">Buscar</button>
+    </div>
+  </div>
+  <div class="col-lg-10 mx-3">
+    <div class="table-responsive">
+      <table class="table table-hover col-12 table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Moneda Origen</th>
+            <th scope="col">Cantidad Origen</th>
+            <th>Moneda Destino</th>
+            <th>Email CLiente</th>
+            <th>Tasa de Conversion</th>
+            <th>Cantidad Destino</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr *ngFor="let t of operaciones">
+            <th scope="row">{{t.monedaOrigen}}</th>
+            <td>$ {{t.cantidadOrigen}}</td>
+            <td>{{t.monedaDestino}}</td>
+            <td>{{t.emailCliente}}</td>
+            <td>{{t.tasaConversion}}</td>
+            <td>$ {{t.cantidadDestino}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
