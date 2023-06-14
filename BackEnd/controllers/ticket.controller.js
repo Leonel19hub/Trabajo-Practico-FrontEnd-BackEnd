@@ -2,8 +2,20 @@ const Ticket = require('../models/tickets');
 const ticketCtrl = {};
 
 ticketCtrl.getTickets = async (req, res) => {
-    var tickets = await Ticket.find().populate("espectador");
+
+    let parametros = {}
+
+    if(req.query.categoriaEspectador != '0' && req.query.categoriaEspectador != 'undefined'){
+        parametros.categoriaEspectador = req.query.categoriaEspectador;
+    }
+
+    var tickets = await Ticket.find(parametros).populate("espectador");
     res.json(tickets);
+}
+
+ticketCtrl.getOneTicket = async (req, res) => {
+    const ticket = await Ticket.findById(req.params.id).populate("espectador");
+    res.json(ticket);
 }
 
 ticketCtrl.createTicket = async (req, res) => {

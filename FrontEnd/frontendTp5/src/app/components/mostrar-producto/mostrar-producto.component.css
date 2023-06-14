@@ -1,0 +1,14 @@
+/* .image-size {
+  width: 400px !important;
+  height: 500px;
+  object-fit: cover;
+} */
+ #carouselExampleFade{
+  width: 60%;
+  margin: 0 auto;
+ }
+
+.bi{
+  color: #000;
+  font-size: 30px;
+}

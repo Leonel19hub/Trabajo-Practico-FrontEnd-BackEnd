@@ -1,0 +1,47 @@
+<div class="container my-4 col-8">
+  <form class="row g-3 needs-validation was-validated" novalidate>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Precio Ticket</label>
+      <input type="text" class="form-control" id="validationCustom01" name="precioTicket" [(ngModel)]="ticket.precioTicket" required>
+      <div class="invalid-feedback">
+        Por favor ingrese el nombre del producto
+      </div>
+
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom04" class="form-label">Categoria Espectador</label>
+      <select class="form-select" id="validationCustom04" name="categoriaEspectador" [(ngModel)]="ticket.categoriaEspectador" required>
+        <option value="e">Extranjeto</option>
+        <option value="l">Local</option>
+      </select>
+      <div class="invalid-feedback">
+        Por favor seleccione una opción.
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Fecha Compra</label>
+      <input type="date" class="form-control" id="validationCustom02" name="fechaCompra" [(ngModel)]="ticket.fechaCompra" [value]="ticket.fechaCompra | date:'yyyy-MM-dd'" required>
+      <div class="invalid-feedback">
+        Por favor ingrese una fecha del producto
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom04" class="form-label">Espectador</label>
+      <select class="form-select" id="validationCustom04" name="espectador" [(ngModel)]="ticket.espectador" required>
+        <option *ngFor="let e of espectadores" [ngValue]="e"> {{e.apellido}} {{e.nombre}} </option>
+      </select>
+      <div class="invalid-feedback">
+        Por favor seleccione una opción.
+      </div>
+    </div>
+    <div class="col-12">
+      <button *ngIf="accion === 'new'" (click)="guardarTicket()" class="btn btn-success mx-3" type="submit">Guardar Ticket</button>
+      <button *ngIf="accion === 'update'" (click)="modificarTicket()" class="btn btn-primary" type="submit">Modificar Ticket</button>
+      <button [routerLink]="['/mostrar-tickets']" class="btn btn-dark mx-2">Volver</button>
+    </div>
+
+  </form>
+</div>
+
+
+

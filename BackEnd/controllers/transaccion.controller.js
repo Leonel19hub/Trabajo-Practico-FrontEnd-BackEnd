@@ -9,7 +9,7 @@ transaccionCtrl.getTransacciones = async (req, res) => {
   //   parametros.monedaOrigen = req.query.monedaOrigen;
   //   parametros.monedaDestino = req.query.monedaDestino;
   // }
-  if (req.query.monedaOrigen != 'undefined' && req.query.monedaOrigen != 'undefined') {
+  if ((req.query.monedaOrigen != 'undefined' && req.query.monedaOrigen != 'undefined') && (req.query.monedaOrigen != '0' && req.query.monedaOrigen != '0')) {
     parametros.monedaOrigen = req.query.monedaOrigen;
     parametros.monedaDestino = req.query.monedaDestino;
   }

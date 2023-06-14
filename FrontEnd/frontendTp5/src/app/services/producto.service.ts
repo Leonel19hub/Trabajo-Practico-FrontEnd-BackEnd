@@ -26,7 +26,7 @@ export class ProductoService {
 
   public getProductos():Observable<any>{
     let httpOptions = {
-      header: new HttpHeaders({
+      headers: new HttpHeaders({
 
       }),
       params: new HttpParams()

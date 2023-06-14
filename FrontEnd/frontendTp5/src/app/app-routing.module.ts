@@ -6,6 +6,8 @@ import { ListadoProductoComponent } from './components/listado-producto/listado-
 import { CargarProductoComponent } from './components/cargar-producto/cargar-producto.component';
 import { TransaccionComponent } from './components/transaccion/transaccion.component';
 import { MostrarTransaccionesComponent } from './components/mostrar-transacciones/mostrar-transacciones.component';
+import { TicketComponent } from './components/ticket/ticket.component';
+import { FormTicketComponent } from './components/form-ticket/form-ticket.component';
 
 const routes: Routes = [
   {path:"mostrar-productos-destacados", component: MostrarProductoComponent},
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path:"cargar-producto/:id", component: FormProductoComponent},
   {path:"guardar-producto", component: CargarProductoComponent},
   {path:"cargar-transaccion", component: TransaccionComponent},
-  {path:"mostrar-transacciones", component: MostrarTransaccionesComponent}
+  {path:"mostrar-transacciones", component: MostrarTransaccionesComponent},
+  {path:"mostrar-tickets", component: TicketComponent},
+  {path:"form-ticket/:id", component: FormTicketComponent}
 ];
 
 @NgModule({

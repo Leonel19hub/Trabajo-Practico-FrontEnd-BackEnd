@@ -13,7 +13,8 @@ import { ListadoProductoComponent } from './components/listado-producto/listado-
 import { CargarProductoComponent } from './components/cargar-producto/cargar-producto.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { TransaccionComponent } from './components/transaccion/transaccion.component';
-import { MostrarTransaccionesComponent } from './components/mostrar-transacciones/mostrar-transacciones.component'
+import { MostrarTransaccionesComponent } from './components/mostrar-transacciones/mostrar-transacciones.component';
+import { FormTicketComponent } from './components/form-ticket/form-ticket.component'
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MostrarTransaccionesComponent } from './components/mostrar-transaccione
     TicketComponent,
     TransaccionComponent,
     MostrarTransaccionesComponent,
+    FormTicketComponent,
 
   ],
   imports: [

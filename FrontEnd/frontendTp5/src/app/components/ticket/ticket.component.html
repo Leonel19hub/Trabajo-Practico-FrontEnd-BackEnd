@@ -1,1 +1,52 @@
-<p>ticket works!</p>
+<div class="container my-4">
+  <div class="col-12 d-flex">
+    <div class="d-flex col-7">
+      <label for="" class="form-label mx-4">Seleccione tipo de espectador</label>
+      <select [(ngModel)]="espectador" class="form-select" name="espectador" aria-label="Default select example">
+        <option value="0">Todos</option>
+        <option value="e">Extranjero</option>
+        <option value="l">Local</option>
+      </select>
+
+    </div>
+    <div class="">
+      <button (click)="buscar()" class="btn btn-success btn-lg mx-4">Buscar</button>
+    </div>
+    <div>
+      <button (click)="guardarTicket()" class="btn btn-outline-primary btn-lg">Agregar</button>
+    </div>
+  </div>
+</div>
+<div class="container d-flex justify-content-center my-4 mx-3">
+  <div class="col-8">
+    <div class="table-responsive">
+      <table class="table table-hover col-12 table-dark">
+        <thead>
+          <tr>
+            <th>Precio</th>
+            <th>Categoria</th>
+            <th>Fecha Compra</th>
+            <th>Espectador</th>
+            <th>Edicion</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr *ngFor="let t of tickets">
+            <th scope="row">$ {{t.precioTicket}}</th>
+            <td>
+              <ng-container *ngIf="t.categoriaEspectador === 'e'">Extranjero</ng-container>
+              <ng-container *ngIf="t.categoriaEspectador === 'l'">Local</ng-container>
+            </td>
+            <td>{{t.fechaCompra}}</td>
+            <td>{{t.espectador.nombre}} {{t.espectador.apellido}}</td>
+            <td>
+              <button (click)="modificarTicket(t)" class="btn btn-warning mx-1 my-1"><i class="bi bi-pencil-square"></i></button>
+              <button (click)="eliminarTicket(t)" class="btn btn-danger mx-1 my-1"><i class="bi bi-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+</div>
