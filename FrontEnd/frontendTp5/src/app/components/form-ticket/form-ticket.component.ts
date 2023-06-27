@@ -26,12 +26,16 @@ export class FormTicketComponent implements OnInit {
 
   public guardarTicket(){
     this.serviceTicket.createTicket(this.ticket).subscribe();
-    this.router.navigate(['/mostrar-tickets']);
+    alert("Ticket Modificado")
+    // this.router.navigate(['/mostrar-tickets']);
+    // location.reload();
   }
 
   public modificarTicket(){
     this.serviceTicket.updateTicket(this.ticket).subscribe();
-    this.router.navigate(['/mostrar-tickets']);
+    alert("Ticket Modificado")
+    // this.router.navigate(['/mostrar-tickets']);
+    // location.reload();
   }
 
   ngOnInit(): void {

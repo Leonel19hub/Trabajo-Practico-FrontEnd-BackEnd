@@ -50,17 +50,35 @@ ticketCtrl.deleteTicket = async (req, res) => {
 };
 
 ticketCtrl.editTicket = async (req, res) => {
-    const vticket = new Ticket(req.body);
+    // const vticket = new Ticket(req.body);
+    // try {
+    //     await Ticket.updateOne({ _id: req.body._id }, vticket);
+    //     res.json({
+    //         'status': '1',
+    //         'msg': 'Ticket modificado'
+    //     });
+    // } catch (error) {
+    //     res.status(400).json({
+    //         'status': '0',
+    //         'msg': 'Error procesando la operación.'
+    //     });
+    // }
     try {
-        await Ticket.updateOne({ _id: req.body._id }, vticket);
+        const ticket = await Ticket.findByIdAndUpdate(req.params.id, req.body);
+        if(!ticket){
+            return res.status(404).json({
+                status: '0',
+                msg: 'Ticket no encontrado'
+            });
+        }
         res.json({
-            'status': '1',
-            'msg': 'Ticket modificado'
-        });
+            status: '1',
+            msg: 'Ticket Actualizado'
+        })
     } catch (error) {
         res.status(400).json({
-            'status': '0',
-            'msg': 'Error procesando la operación.'
+            status: '0',
+            msg: 'Error procesando la operacion'
         });
     }
 };
