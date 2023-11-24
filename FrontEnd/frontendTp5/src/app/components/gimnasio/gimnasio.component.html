@@ -1,0 +1,12 @@
+<div class="container my-4 d-flex flex-wrap justify-content-center bg-black">
+  <div class="card my-2 mx-1" style="width: 18rem;" *ngFor="let p of productos">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{p.title}}</h5>
+      <p class="card-text">{{p.description}}</p>
+      <p class="card-text">{{p.unit_price}}</p>
+
+      <button class="btn btn-primary" (click)="crearOrden(p)">Comprar</button>
+    </div>
+  </div>
+</div>

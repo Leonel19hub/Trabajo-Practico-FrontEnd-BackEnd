@@ -3,11 +3,11 @@
   <form>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Nombre del Producto</label>
-      <input type="email" [(ngModel)]="producto.nombre" name="nombre" class="form-control" id="exampleInputEmail1">
+      <input type="email" [(ngModel)]="producto.title" name="nombre" class="form-control" id="exampleInputEmail1">
     </div>
     <div class=" mb-3">
       <label for="exampleInputPassword1" class="form-label">Descripcion</label>
-      <input type="text" [(ngModel)]="producto.descripcion" name="descripcion" class="form-control" id="exampleInputPassword1">
+      <input type="text" [(ngModel)]="producto.description" name="descripcion" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="mb-3">
       <label for="exampleInput Password1" class="form-label"> Imagen (URL)</label>
@@ -15,18 +15,11 @@
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Precio:</label>
-      <input type="number"[(ngModel)]="producto.precio" name="precio" class="form-control" id="exampleInputPassword1">
+      <input type="number"[(ngModel)]="producto.unit_price" name="precio" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Stock:</label>
       <input type="number" [(ngModel)]="producto.stock" name="stock" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <label for="exampleInputPassword1" name="destacado" class="form-label">Destacado</label>
-      <select [(ngModel)]="producto.destacado" name="destacado">
-        <option  [ngValue]="true">Si</option>
-        <option  [ngValue]="false">No</option>
-      </select>
     </div>
     <button type="submit" class="btn btn-primary" (click)="guardarProducto()">Guardar</button>
   </form>

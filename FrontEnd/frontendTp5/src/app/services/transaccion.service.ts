@@ -37,8 +37,8 @@ export class TransaccionService {
     const httpOptions = {
       headers : new HttpHeaders({
         'content-type': 'application/x-www-form-urlencoded',
-        'X-RapidAPI-Key': '0a1eb14551mshf885964aee99f9cp16dc39jsn86c595317698',
-        'X-RapidAPI-Host': 'community-neutrino-currency-conversion.p.rapidapi.com'
+		'X-RapidAPI-Key': '5997b3d522msh272c7130965f68dp1f1631jsn820d67564be8',
+		'X-RapidAPI-Host': 'community-neutrino-currency-conversion.p.rapidapi.com'
       }),
     }
     const body = new HttpParams()

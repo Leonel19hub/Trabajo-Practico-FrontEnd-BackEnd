@@ -1,9 +1,8 @@
 export class Producto {
   _id!:string;
-  nombre!:string;
-  descripcion!:string;
-  imagen!:string;
-  precio!:number;
+  title!:string;
+  unit_price!:string;
+  description!:string;
   stock!:number;
-  destacado!: boolean;
+  imagen!:string;
 }

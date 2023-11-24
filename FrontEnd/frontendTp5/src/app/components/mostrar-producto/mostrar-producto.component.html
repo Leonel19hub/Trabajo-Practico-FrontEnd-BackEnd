@@ -17,7 +17,7 @@
       <div class="carousel-item" *ngFor="let p of productos; let i = index" [class.active]="i === 0">
         <img src="{{p.imagen}}" class="d-block w-100 image-size" alt="...">
         <div class="carousel-caption d-none d-md-block text-dark">
-          <h5>{{p.nombre}}</h5>
+          <h5>{{p.title}}</h5>
         </div>
       </div>
     </div>

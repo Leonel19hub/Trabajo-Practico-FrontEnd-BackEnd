@@ -14,7 +14,12 @@ import { CargarProductoComponent } from './components/cargar-producto/cargar-pro
 import { TicketComponent } from './components/ticket/ticket.component';
 import { TransaccionComponent } from './components/transaccion/transaccion.component';
 import { MostrarTransaccionesComponent } from './components/mostrar-transacciones/mostrar-transacciones.component';
-import { FormTicketComponent } from './components/form-ticket/form-ticket.component'
+import { FormTicketComponent } from './components/form-ticket/form-ticket.component';
+import { GimnasioComponent } from './components/gimnasio/gimnasio.component'
+import { LoginService } from './services/login.service';
+import { LoginComponent } from './components/login/login.component';
+import { OAuthModule } from 'angular-oauth2-oidc';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -29,15 +34,19 @@ import { FormTicketComponent } from './components/form-ticket/form-ticket.compon
     TransaccionComponent,
     MostrarTransaccionesComponent,
     FormTicketComponent,
+    GimnasioComponent,
+    LoginComponent,
+    CalendarComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    OAuthModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

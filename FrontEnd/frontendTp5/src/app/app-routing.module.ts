@@ -8,6 +8,9 @@ import { TransaccionComponent } from './components/transaccion/transaccion.compo
 import { MostrarTransaccionesComponent } from './components/mostrar-transacciones/mostrar-transacciones.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { FormTicketComponent } from './components/form-ticket/form-ticket.component';
+import { GimnasioComponent } from './components/gimnasio/gimnasio.component';
+import { LoginComponent } from './components/login/login.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 const routes: Routes = [
   {path:"mostrar-productos-destacados", component: MostrarProductoComponent},
@@ -17,7 +20,10 @@ const routes: Routes = [
   {path:"cargar-transaccion", component: TransaccionComponent},
   {path:"mostrar-transacciones", component: MostrarTransaccionesComponent},
   {path:"mostrar-tickets", component: TicketComponent},
-  {path:"form-ticket/:id", component: FormTicketComponent}
+  {path:"form-ticket/:id", component: FormTicketComponent},
+  {path:"gimnasio", component: GimnasioComponent},
+  {path:"login", component: LoginComponent},
+  {path:"calendar", component: CalendarComponent},
 ];
 
 @NgModule({

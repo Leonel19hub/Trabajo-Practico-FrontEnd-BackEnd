@@ -15,11 +15,10 @@
             </thead>
             <tbody>
               <tr *ngFor="let p of productos">
-                <td>{{p.nombre}}</td>
-                <td >{{p.descripcion}}</td>
-                <td>$ {{p.precio}}</td>
+                <td>{{p.title}}</td>
+                <td >{{p.description}}</td>
+                <td>$ {{p.unit_price}}</td>
                 <td>{{p.stock}}</td>
-                <td>{{p.destacado}}</td>
                 <td>
                   <button (click)="modificarProducto(p)" class="btn btn-warning mx-1 my-1"><i class="bi bi-pencil-square"></i></button>
                   <button (click)="eliminarProducto(p)" class="btn btn-danger mx-1 my-1"><i class="bi bi-trash"></i></button>
